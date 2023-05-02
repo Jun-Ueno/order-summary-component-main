@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Order summary card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        font-family: 'Red Hat Display', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: hsl(223, 47%, 23%);
+        background-color: hsl(225, 100%, 94%);
+        background-image: url(./images/pattern-background-desktop.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      button {
+        width: 100%;
+        border: none;
+        color: hsl(0, 0%, 100%);
+        background-color: hsl(245, 75%, 52%);
+        font-family: 'Red Hat Display', sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+      }
+      button:hover {
+        opacity: 70%;
+      }
+      button,
+      .container {
+        box-shadow: 0 1rem 1rem hsl(225, 100%, 94%);
+      }
+      h1 {
+        font-size: 1.75rem;
+        font-weight: 900;
+        margin-bottom: 1rem;
+      }
+      p {
+        line-height: 1.5;
+        color: hsl(224, 23%, 55%);
+      }
+      h1,
+      p.text-body,
+      p.cancel-order {
+        text-align: center;
+      }
+      .container {
+        max-width: 450px;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 1rem;
+        margin: 1.5rem;
+      }
+      p.cancel-order a {
+        font-weight: 700;
+        text-decoration: none;
+        color: hsl(224, 23%, 55%);
+      }
+      p.cancel-order:hover a {
+        color: hsl(0, 0%, 0%);
+      }
+      .hero-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem 1rem 0 0;
+      }
+      .text-box {
+        padding: 2.5rem 3rem;
+      }
+      .text-body {
+        margin-bottom: 1rem;
+      }
+      .plan-row {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 1rem;
+        align-items: center;
+        padding: 1.5rem;
+        background-color: hsl(225, 100%, 98%);
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+      }
+      .icon-music img {
+        width: 48px;
+        height: 48px;
+        display: block;
+      }
+      .plan-name span {
+        color: hsl(223, 47%, 23%);
+        font-weight: 700;
+      }
+      .plan-change a {
+        color: hsl(245, 75%, 52%);
+        font-weight: 700;
+        font-size: 0.875rem;
+      }
+      .plan-change:hover a {
+        opacity: 80%;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      @media screen and (max-width: 500px) {
+        body {
+          background-image: url(./images/pattern-background-mobile.svg);
+        }
+        .text-box {
+          padding: 2rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <figure class="hero-image"><img src="./images/illustration-hero.svg" alt="" /></figure>
+      <section class="text-box">
+        <h1>Order Summary</h1>
+        <p class="text-body">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+        <div class="plan-row">
+          <figure class="icon-music"><img src="./images/icon-music.svg" alt="" /></figure>
+          <p class="plan-name"><span>Annual Plan</span><br />$59.99/year</p>
+          <p class="plan-change"><a href="#">Change</a></p>
+        </div>
+        <button type="submit">Proceed to Payment</button>
+        <p class="cancel-order"><a href="#">Cancel Order</a></p>
+      </section>
+    </main>
+
+    <!-- <div class="attribution">Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
